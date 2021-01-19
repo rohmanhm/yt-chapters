@@ -22,7 +22,8 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "postbuild": "echo \"#!/usr/bin/env node\n\" \"$(cat dist/index.js)\" > dist/index.js"
   },
   "peerDependencies": {},
   "husky": {
