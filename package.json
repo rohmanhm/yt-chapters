@@ -20,11 +20,10 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "tsdx build && npm run postbuild",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "postbuild": "echo \"#!/usr/bin/env node\n\" \"$(cat dist/index.js)\" > dist/index.js",
-    "prepublish": "npm run postbuild"
+    "postbuild": "echo \"#!/usr/bin/env node\n\" \"$(cat dist/index.js)\" > dist/index.js"
   },
   "peerDependencies": {},
   "husky": {
