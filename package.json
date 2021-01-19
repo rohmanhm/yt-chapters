@@ -8,6 +8,10 @@
     "dist",
     "src"
   ],
+  "browser": {
+    "fs": false,
+    "child_process": false
+  },
   "engines": {
     "node": ">=10"
   },
@@ -38,11 +42,13 @@
   "size-limit": [
     {
       "path": "dist/yt-chapters.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "10 KB",
+      "webpack": false
     },
     {
       "path": "dist/yt-chapters.esm.js",
-      "limit": "10 KB"
+      "limit": "10 KB",
+      "webpack": false
     }
   ],
   "devDependencies": {
