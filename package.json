@@ -23,7 +23,8 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "postbuild": "echo \"#!/usr/bin/env node\n\" \"$(cat dist/index.js)\" > dist/index.js"
+    "postbuild": "echo \"#!/usr/bin/env node\n\" \"$(cat dist/index.js)\" > dist/index.js",
+    "prepublish": "npm run postbuild"
   },
   "peerDependencies": {},
   "husky": {
