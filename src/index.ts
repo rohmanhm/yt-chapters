@@ -29,7 +29,9 @@ async function main() {
   );
 
   if (cli.flags.file) {
-    const output = await parseChapters(cli.flags.file);
+    const output = await parseChapters(cli.flags.file, {
+      intro: cli.flags.intro,
+    });
     console.log(output);
     return;
   }
